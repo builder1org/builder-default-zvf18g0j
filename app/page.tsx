@@ -1,85 +1,142 @@
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { ShopSection } from "./components/ShopSection";
+
 export default function Home() {
   return (
-    <main style={{ maxWidth: 720, margin: "0 auto", padding: "32px 20px" }}>
-      <header
-        style={{
-          marginBottom: 40,
-          textAlign: "center",
-          padding: "24px 16px",
-          backgroundColor: "#f0fdf4",
-          borderRadius: 16,
-        }}
-      >
-        <p
-          style={{
-            color: "#10b981",
-            fontWeight: 600,
-            margin: 0,
-            fontSize: "1.1rem",
-          }}
-        >
-          Welcome to Care Clinic
-        </p>
-        <h1 style={{ fontSize: "2.25rem", margin: "8px 0", fontWeight: 600 }}>
-          Your Health, Our Care
-        </h1>
-        <p style={{ color: "#374151", lineHeight: 1.6, margin: 0, fontSize: "1.05rem" }}>
-          We're here to help you feel your best. Compassionate, caring healthcare for you and your family.
-        </p>
-      </header>
+    <>
+      <Header />
+      <main>
+        <section className="hero">
+          <div className="container hero__grid">
+            <div>
+              <div className="hero__badge">
+                <span aria-hidden>✓</span>
+                اصل بودن کالا — گارانتی معتبر
+              </div>
+              <h1>لاستیک مناسب خودروی شما، با بهترین قیمت</h1>
+              <p>
+                فروشگاه تخصصی لاستیک با ده‌ها برند معتبر. مشاوره رایگان، نصب
+                حرفه‌ای و ارسال به سراسر شهر.
+              </p>
+              <div className="hero__actions">
+                <a href="#products" className="btn btn--primary">
+                  مشاهده محصولات
+                </a>
+                <a href="#contact" className="btn btn--ghost">
+                  تماس با ما
+                </a>
+              </div>
+              <div className="hero__stats">
+                <div className="stat">
+                  <strong>+۵۰۰</strong>
+                  <span>مدل لاستیک</span>
+                </div>
+                <div className="stat">
+                  <strong>۱۵+</strong>
+                  <span>برند معتبر</span>
+                </div>
+                <div className="stat">
+                  <strong>۱۰ سال</strong>
+                  <span>تجربه</span>
+                </div>
+              </div>
+            </div>
+            <div className="hero__visual">
+              <div className="tire-icon" aria-hidden />
+              <p style={{ margin: 0, color: "rgba(255,255,255,0.7)", fontSize: "0.95rem" }}>
+                نصب، بالانس و تنظیم باد — در همان روز تحویل
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: "1.25rem" }}>Hours</h2>
-        <p>Mon–Fri: 9:00 – 18:00</p>
-        <p>Sat: 10:00 – 14:00</p>
-      </section>
+        <ShopSection />
 
-      <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: "1.25rem" }}>Contact</h2>
-        <p>Phone: (555) 010-0200</p>
-        <p>Email: hello@careclinic.example</p>
-      </section>
+        <section id="features" className="section features">
+          <div className="container">
+            <div className="section__head">
+              <h2 style={{ color: "#fff" }}>چرا لاستیک‌خانه؟</h2>
+              <p style={{ color: "rgba(255,255,255,0.65)" }}>
+                خدماتی که کنار فروش لاستیک به شما ارائه می‌دهیم.
+              </p>
+            </div>
+            <div className="features__grid">
+              <div className="feature-item">
+                <div className="feature-item__icon" aria-hidden>
+                  🔧
+                </div>
+                <h3>نصب و بالانس</h3>
+                <p>تجهیزات دیجیتال و تکنسین مجرب</p>
+              </div>
+              <div className="feature-item">
+                <div className="feature-item__icon" aria-hidden>
+                  🚚
+                </div>
+                <h3>ارسال سریع</h3>
+                <p>تحویل در تهران و شهرهای اطراف</p>
+              </div>
+              <div className="feature-item">
+                <div className="feature-item__icon" aria-hidden>
+                  💳
+                </div>
+                <h3>پرداخت اقساطی</h3>
+                <p>همکاری با فروشگاه‌های معتبر</p>
+              </div>
+              <div className="feature-item">
+                <div className="feature-item__icon" aria-hidden>
+                  📋
+                </div>
+                <h3>مشاوره رایگان</h3>
+                <p>انتخاب سایز و برند مناسب خودرو</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section>
-        <h2 style={{ fontSize: "1.25rem" }}>Services</h2>
-        <ul>
-          <li>General checkups</li>
-          <li>Preventive care</li>
-          <li>Consultations</li>
-        </ul>
-      </section>
-
-      <footer
-        style={{
-          marginTop: 40,
-          padding: "32px 20px",
-          borderTop: "1px solid #e5e7eb",
-          textAlign: "center",
-          color: "#4b5563",
-        }}
-      >
-        <p style={{ fontSize: "1.1rem", fontWeight: 600, margin: "0 0 12px 0" }}>
-          Thanks for stopping by 💙
-        </p>
-        <p style={{ margin: "0 0 16px 0", lineHeight: 1.6, fontSize: "1.05rem" }}>
-          We're here for you and your family. Drop us a line anytime — we'd love
-          to hear from you.
-        </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "center" }}>
-          <p style={{ margin: 0, fontSize: "0.95rem" }}>
-            Phone: (555) 010-0200
-          </p>
-          <p style={{ margin: 0, fontSize: "0.95rem" }}>
-            Email: hello@careclinic.example
-          </p>
-          <p style={{ margin: 0, fontSize: "0.95rem" }}>
-            Mon–Fri: 9:00 – 18:00 · Sat: 10:00 – 14:00
-          </p>
-        </div>
-        <p style={{ marginTop: 16, fontSize: "0.85rem", color: "#9ca3af" }}>
-          © {new Date().getFullYear()} Care Clinic. Made with care for you.
-        </p>
-      </footer>
-    </main>
+        <section id="contact" className="section">
+          <div className="container">
+            <div className="section__head">
+              <h2>تماس با ما</h2>
+              <p>برای استعلام قیمت یا رزرو نوبت نصب با ما در ارتباط باشید.</p>
+            </div>
+            <div className="contact-grid">
+              <div className="contact-card">
+                <h3>اطلاعات تماس</h3>
+                <ul className="contact-list">
+                  <li>
+                    <span aria-hidden>📍</span>
+                    <span>تهران، خیابان نمونه، پلاک ۱۲ — فروشگاه لاستیک‌خانه</span>
+                  </li>
+                  <li>
+                    <span aria-hidden>📞</span>
+                    <a href="tel:02112345678">۰۲۱-۱۲۳۴۵۶۷۸</a>
+                  </li>
+                  <li>
+                    <span aria-hidden>📱</span>
+                    <a href="tel:09121234567">۰۹۱۲-۱۲۳۴۵۶۷</a>
+                  </li>
+                  <li>
+                    <span aria-hidden>✉️</span>
+                    <a href="mailto:info@lastick-home.example">info@lastick-home.example</a>
+                  </li>
+                </ul>
+                <a
+                  href="tel:02112345678"
+                  className="btn btn--primary"
+                  style={{ width: "100%", marginTop: 16 }}
+                >
+                  تماس برای استعلام
+                </a>
+              </div>
+              <div className="map-placeholder">
+                <span>📍 نقشه فروشگاه (قابل اتصال به Google Maps)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
