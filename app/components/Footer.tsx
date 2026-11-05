@@ -4,9 +4,9 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__grid">
         <div>
-          <div className="logo" style={{ marginBottom: 12 }}>
+          <div className="logo logo--on-dark" style={{ marginBottom: 12 }}>
             <span className="logo__mark" aria-hidden>
-              ⭕
+              L
             </span>
             <span>لاستیک‌خانه</span>
           </div>

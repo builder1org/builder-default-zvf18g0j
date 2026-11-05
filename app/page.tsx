@@ -1,55 +1,14 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { ShopSection } from "./components/ShopSection";
+import { HeroPromo, FloatingSupport } from "./components/HeroPromo";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <section className="hero">
-          <div className="container hero__grid">
-            <div>
-              <div className="hero__badge">
-                <span aria-hidden>✓</span>
-                اصل بودن کالا — گارانتی معتبر
-              </div>
-              <h1>لاستیک مناسب خودروی شما، با بهترین قیمت</h1>
-              <p>
-                فروشگاه تخصصی لاستیک با ده‌ها برند معتبر. مشاوره رایگان، نصب
-                حرفه‌ای و ارسال به سراسر شهر.
-              </p>
-              <div className="hero__actions">
-                <a href="#products" className="btn btn--primary">
-                  مشاهده محصولات
-                </a>
-                <a href="#contact" className="btn btn--ghost">
-                  تماس با ما
-                </a>
-              </div>
-              <div className="hero__stats">
-                <div className="stat">
-                  <strong>+۵۰۰</strong>
-                  <span>مدل لاستیک</span>
-                </div>
-                <div className="stat">
-                  <strong>۱۵+</strong>
-                  <span>برند معتبر</span>
-                </div>
-                <div className="stat">
-                  <strong>۱۰ سال</strong>
-                  <span>تجربه</span>
-                </div>
-              </div>
-            </div>
-            <div className="hero__visual">
-              <div className="tire-icon" aria-hidden />
-              <p style={{ margin: 0, color: "rgba(255,255,255,0.7)", fontSize: "0.95rem" }}>
-                نصب، بالانس و تنظیم باد — در همان روز تحویل
-              </p>
-            </div>
-          </div>
-        </section>
+        <HeroPromo />
 
         <ShopSection />
 
@@ -57,7 +16,7 @@ export default function Home() {
           <div className="container">
             <div className="section__head">
               <h2 style={{ color: "#fff" }}>چرا لاستیک‌خانه؟</h2>
-              <p style={{ color: "rgba(255,255,255,0.65)" }}>
+              <p style={{ color: "rgba(255,255,255,0.75)" }}>
                 خدماتی که کنار فروش لاستیک به شما ارائه می‌دهیم.
               </p>
             </div>
@@ -94,7 +53,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="section">
+        <section id="contact" className="section section--light">
           <div className="container">
             <div className="section__head">
               <h2>تماس با ما</h2>
@@ -137,6 +96,7 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      <FloatingSupport />
     </>
   );
 }
